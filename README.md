@@ -6,7 +6,7 @@ It's a demo of ethereum Dapp to access ERC 20 token.
 You can transfer token from account 1 to the other accounts.
 
 
-## Technical stack
+# Technical stack
 
 -blockchain:
   -ERC 20 token contract built by Truffle and deployed to testrpc hosted on https://private-chain.herokuapp.com/
