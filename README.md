@@ -5,7 +5,8 @@
 It's a demo of ethereum Dapp to access ERC 20 token.
 You can transfer token from account 1 to the other accounts.
 
-#Techniacl stack:
+
+## Technical stack
 
 -blockchain:
   -ERC 20 token contract built by Truffle and deployed to testrpc hosted on https://private-chain.herokuapp.com/
@@ -16,7 +17,7 @@ You can transfer token from account 1 to the other accounts.
   -express
 
 
-#Reference:
+# Reference:
   Ethereum smart contract 撰寫
     -https://medium.com/taipei-ethereum-meetup/ethereum-smart-contract-%E6%92%B0%E5%AF%AB-68588a3d8358
   
