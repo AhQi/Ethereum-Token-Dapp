@@ -9,12 +9,12 @@ You can transfer token from account 1 to the other accounts.
 # Technical stack
 
 -blockchain:
-  -ERC 20 token contract built by Truffle and deployed to testrpc hosted on https://private-chain.herokuapp.com/
+  - ERC 20 token contract built by Truffle and deployed to testrpc hosted on https://private-chain.herokuapp.com/
   - Contract address: 0xbcfa06c93b650f0b78e810297432a63c216b06c5
   
 -backend:
-  -Web3.js to manipulate ethereum
-  -express
+  - Web3.js to manipulate ethereum
+  - express
 
 
 # Reference:
