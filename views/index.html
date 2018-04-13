@@ -1,0 +1,48 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="UTF-8"/><title>Ethereum Token Demo</title><!--Always force latest IE rendering engine (even in intranet) & Chrome Frame Remove this if you use the .htaccess-->
+
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.get("/GET/accounts", function(ret){
+                $("#msg").text("");
+                for(var i =0; i < ret.length ; i++)
+                    $("#accounts").append(
+                        "<h3>"+"account"+(i+1)+":"+ret[i].id+"</h3>"+
+                        "<p>"+"balance:"+ret[i].balance+"</p>")
+
+            })
+        });
+    </script>
+</head>
+</html>
+<body>
+<div class="container-fluid">
+
+    <h1 >Ethereum Token Demo</h1>
+    <p>You can transfer the token from account 1 to the others.</p>
+    <form action="/POST/transfer" method="post">
+        Recipient account ID(2~10):<br>
+        <input type="text" name="accountId"><br>
+        Transfer amount:<br>
+        <input type="text" name="amount"><br>
+        <input type="submit">
+    </form>
+    <div id="accounts">
+        <h2 >Accounts info:</h2>
+        <h2 id="msg">Loading..</h2>
+
+    </div>
+</div>
+</body>
